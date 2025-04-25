@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curvy Marquee</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +16,9 @@
         <h1>Portfolio</h1>
         <ul>
             <li>Home</li>
-            <li>About</li>
+            <a href="#about">
+                <li>About</li>
+            </a>
             <li>Project</li>
             <li>Contact</li>
         </ul>
@@ -45,7 +50,7 @@
         </div>
     </div>
 
-    <div class="breaker">
+    <div class="breaker" id="about">
         <div class="box box-1">
             <div class="marquee">
                 <div class="text">
@@ -66,7 +71,7 @@
                     <p>💡 Idea → Code → Panic → Repeat</p>
                     <p>🚧 Portfolio under funstruction 🚧</p>
                 </div>
-                
+
             </div>
         </div>
         <div class="box box-2">
@@ -89,15 +94,34 @@
                     <p>💡 Innovation in progress</p>
                     <p>🎨 Minimal & Magical</p>
                 </div>
-                
+
             </div>
         </div>
     </div>
 
     <div class="about">
-        
+        <h1>About Me</h1>
+        <div class="txt">
+            <span>Hey there! I'm Aryan Thawkar — just your friendly neighborhood coder trying to make the internet a
+                smarter place (or at least less buggy).</span>
+            <span> Currently a CSE (Data Science) student, I spend most of my time wrestling with code, building cool
+                web apps, and occasionally yelling at my laptop (we’re in a love-hate relationship). I’m into full-stack
+                development, backend wizardry, and making projects that actually help people.</span>
+            <span> When I’m not coding, you’ll probably find me participating in hackathons, surviving on caffeine and
+                last-minute ideas, and somehow turning chaos into working prototypes.</span>
+            <span> Let’s connect and build something awesome (or at least debug it together)!</span>
+        </div>
     </div>
-    
+
+    <div class="skills">
+        <div class="container">
+            <div class="card">
+                <img src="assets/html.png" alt="">
+                <span>HTML</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

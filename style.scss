@@ -1,10 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body,html{
+body,
+html {
     background: #000000;
     margin: 0;
     padding: 0;
@@ -14,49 +15,57 @@ body,html{
     color: wheat;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-nav{
+
+nav {
     position: fixed;
     z-index: 99;
     display: flex;
     background-color: #000000;
     justify-content: space-around;
     width: 100%;
-    h1{
+
+    h1 {
         padding: 15px;
     }
-    ul{
+
+    ul {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 40%;
         right: 0px;
         padding: 10px;
+        a{
+            text-decoration: none;
+        }
 
-        li{
+        li {
             list-style: none;
             border-radius: 50px;
             padding: 10px;
-            &:hover{
+            color: beige;
+
+            &:hover {
                 background-color: rgb(197, 178, 144);
                 color: black;
-                
+
                 transition: all 0.3s ease-in-out;
-                
+
             }
 
         }
     }
 }
 
-.view-1{
+.view-1 {
     position: relative;
     width: 100%;
     height: 100%;
 
-    .marquee{
+    .marquee {
         position: relative;
 
-        &::after{
+        &::after {
             content: "";
             height: 50px;
             width: 100px;
@@ -65,19 +74,19 @@ nav{
             left: 0;
             background-image: linear-gradient(to right, #0e0e0e, transparent);
             transform: rotateX(90deg);
-        
+
         }
-        
-        &::before{
+
+        &::before {
             content: "";
             height: 60px;
             width: 100px;
             position: absolute;
             top: 230px;
             right: 0;
-            background-image: linear-gradient(to right,transparent,transparent, #0e0e0e);
+            background-image: linear-gradient(to right, transparent, transparent, #0e0e0e);
             z-index: 99;
-        
+
         }
 
         svg {
@@ -90,35 +99,36 @@ nav{
                 letter-spacing: 2px;
                 text-transform: uppercase;
             }
-            
+
             path {
                 fill: none;
                 stroke: rgba(0, 0, 0, 0.1);
                 stroke-width: 30;
             }
-            
+
         }
-    
+
     }
-    .htext{
+
+    .htext {
         position: absolute;
         top: 45vh;
         right: 10vw;
     }
 
-    .himg{
+    .himg {
         position: absolute;
         width: 30vw;
         height: 30vh;
 
-        .imgwrapper{
-            
-            img{
+        .imgwrapper {
+
+            img {
                 width: 10vw;
                 position: relative;
             }
 
-            &::before{
+            &::before {
                 content: " ";
                 background-image: url('back.svg');
                 height: 500px;
@@ -126,25 +136,25 @@ nav{
 
             }
         }
-        
 
-        img{
+
+        img {
             width: 10vw;
             position: relative;
         }
-        
+
 
     }
 }
 
-.breaker{
+.breaker {
     width: 100%;
     height: 30%;
     overflow: hidden;
     margin-top: 1.5rem;
     position: relative;
 
-    .box{
+    .box {
         margin-top: 80px;
         border-top: 3px dotted wheat;
         border-bottom: 3px dotted wheat;
@@ -154,23 +164,24 @@ nav{
         background-color: black;
 
     }
-    .box-1{
+
+    .box-1 {
         transform: rotate(5deg);
 
-        .marquee{
+        .marquee {
             display: flex;
             gap: 3rem;
             width: 100%;
             overflow: hidden;
             position: relative;
 
-            .text{
+            .text {
                 display: flex;
                 gap: 3rem;
-                animation: marquee1 10s linear infinite both ;
-                
-                p{
-                    width:max-content;
+                animation: marquee1 10s linear infinite both;
+
+                p {
+                    width: max-content;
                     padding-top: 10px;
                     font-size: 1.3rem;
                     font-weight: 1000;
@@ -178,12 +189,14 @@ nav{
             }
 
         }
-    
+
 
     }
-    .box-2{
+
+    .box-2 {
         transform: rotate(-5deg);
-        .marquee{
+
+        .marquee {
             display: flex;
             align-items: center;
             gap: 3rem;
@@ -191,14 +204,14 @@ nav{
             overflow: hidden;
             position: relative;
 
-            .text{
-                display: flex; 
+            .text {
+                display: flex;
                 align-items: center;
                 // padding: -20px;
                 gap: 3rem;
-                animation: marquee2 10s linear  infinite both ;
-                
-                p{
+                animation: marquee2 10s linear infinite both;
+
+                p {
                     width: 20rem;
                     text-align: center;
                     padding-top: 10px;
@@ -212,25 +225,51 @@ nav{
     }
 }
 
-.about{
+.about {
     width: 100%;
     height: 200%;
+
+    h1 {
+        width: max-content;
+        margin: auto;
+    }
+
+    .txt {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 60vw;
+        margin-top: 10px;
+        margin: auto;
+
+        span {
+            // font-weight: 700;
+            font-family: "Playwrite AU SA", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+
+        }
+    }
 }
 
-@keyframes marquee1{
-    0%{
+@keyframes marquee1 {
+    0% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(-100%);
     }
 }
 
-@keyframes marquee2{
-    0%{
+@keyframes marquee2 {
+    0% {
         transform: translateX(-100%);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
