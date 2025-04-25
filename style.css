@@ -183,7 +183,7 @@ nav ul li:hover {
 
 .about {
   width: 100%;
-  height: 200%;
+  height: 100%;
 }
 .about h1 {
   width: -moz-max-content;
@@ -222,3 +222,220 @@ nav ul li:hover {
     transform: translateX(0);
   }
 }/*# sourceMappingURL=style.css.map */
+
+/* Skills Section */
+.skills {
+  padding: 5rem 2rem;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.skills .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.skills .card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .card:hover {
+  transform: translateY(-10px);
+  background: rgba(197, 178, 144, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skills .card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  background: wheat;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.skills .card:hover::after {
+  bottom: -50px;
+  opacity: 1;
+}
+
+.skills .card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Projects Section */
+.projects {
+  padding: 5rem 2rem;
+  background: #000;
+  border-top: 1px solid rgba(245, 222, 179, 0.2);
+}
+
+.projects h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #0a0a0a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(197, 178, 144, 0.1);
+}
+
+.project-img {
+  height: 200px;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img::after {
+  content: "View Project";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: wheat;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-img::after {
+  opacity: 1;
+}
+
+.project-card h3 {
+  padding: 1rem 1rem 0;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  padding: 0 1rem 1rem;
+  color: #ccc;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  background: rgba(197, 178, 144, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+  background: #0a0a0a;
+  color: wheat;
+  padding: 2rem 0 0;
+  position: relative;
+}
+
+.footer-marquee {
+  background: black;
+  padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid wheat;
+  border-bottom: 1px solid wheat;
+}
+
+.footer-marquee p {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  padding-left: 100%;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.copyright {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(245, 222, 179, 0.2);
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
